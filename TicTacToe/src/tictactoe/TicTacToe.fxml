@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" 
+       xmlns:fx="http://javafx.com/fxml/1" 
+       fx:controller="tictactoe.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu text="Actions">
+            <items>
+              <MenuItem text="Quit" 
+                        onAction="#menuClickHandler"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem text="About"
+              onAction="#menuClickHandler" />
+              <MenuItem text="How to play" 
+              onAction="#menuClickHandler"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <GridPane fx:id = "gameBoard" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="button1" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="button2" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" />
+            <Button fx:id="button3" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" />
+            <Button fx:id="button4" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="1" />
+            <Button fx:id="button5" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="button6" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="button7" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="2" />
+            <Button fx:id="button8" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="button9" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
